@@ -1,0 +1,61 @@
+// VARIABLES
+
+// COLORS
+
+$color-white: #fff;
+$color-black: #000;
+$color-primary: hsl(150, 100%, 66%);
+$color-secondary: hsl(193, 38%, 86%);
+$color-Grayish-Blue: hsl(217, 19%, 38%);
+$color-Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$color-Dark-Blue: hsl(218, 23%, 16%);
+// $color-terciary: #ff5252;
+// $color-cuaternary: #181d20;
+
+// MEDIA QUERYS
+
+$xs: 360px;
+$s: 440px;
+$m: 768px;
+$l: 1280px;
+$xl: 1440px;
+
+// PADDING
+
+$padding-x-small: 16px;
+$padding-small: 40px;
+$padding-large: 80px;
+$padding-extra-large: 150px;
+  
+// FONTS 
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+$font-primary: 'Manrope', sans-serif;
+$font-secondary: "Open Sans", sans-serif;
+
+$font-size-small: 20px;
+$font-size-medium: 30px;
+$font-size-large: 35px;
+$font-size-extra-large: 50px;
+
+
+@mixin for-size($size) {
+  @if $size == xs {
+    @media (max-width: $s) {
+      @content;
+    }
+  } @else if $size == m {
+    @media (min-width: $m) {
+      @content;
+    }
+  } @else if $size == l {
+    @media (min-width: $l) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+}

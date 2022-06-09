@@ -1,0 +1,51 @@
+@import 'vars';
+.card {
+  grid-column: 1/5;
+  background: $color-Dark-Grayish-Blue;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  width: 90%;
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 30px 20px 60px;
+  max-width: 450px;
+  min-width: 300px;
+}
+.card__advice-id{
+  font-size: 1.4rem;
+  letter-spacing: 0.5rem;
+}
+.card__advice-text {
+  color: $color-white;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 28px;
+  font-weight: 800;
+}
+.card__pattern {
+  display: block;
+  width: 100%;
+  background-image: url('../assets/images/pattern-divider-mobile.svg');
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@include for-size(m) {
+  .card {
+    grid-column: 5/9;
+  }
+  .card__pattern {
+    background-image: url('../assets/images/pattern-divider-desktop.svg');
+  }
+}

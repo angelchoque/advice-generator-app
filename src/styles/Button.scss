@@ -1,0 +1,34 @@
+@import 'vars';
+.button-advice {
+  width: 60px;
+  height: 60px;
+  background: $color-primary;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  bottom: -25px;
+  transition: .3s all ease;
+  -webkit-transition: .3s all ease;
+  -moz-transition: .3s all ease;
+  -ms-transition: .3s all ease;
+  -o-transition: .3s all ease;
+}
+.button-advice:hover {
+  box-shadow: 0 0 20px 1px $color-primary;
+}
+.button-advice[disabled] {
+  opacity: .3;
+  cursor: not-allowed;
+}
+.icon-button {
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/icon-dice.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
